@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { mockApi } from '../../services/db';
-import { Product } from '../../types';
-import { useCart } from '../../context/CartContext';
-import { Button } from '../../components/Button';
+import { mockApi } from '../../services/db.ts';
+import { Product } from '../../types.ts';
+import { useCart } from '../../context/CartContext.tsx';
+import { Button } from '../../components/Button.tsx';
 import { Search, Plus, Check } from 'lucide-react';
 
 export const Marketplace: React.FC = () => {

@@ -1,19 +1,19 @@
 import React from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider, useAuth } from './context/AuthContext';
-import { CartProvider } from './context/CartContext';
-import { Layout } from './components/Layout';
+import { AuthProvider, useAuth } from './context/AuthContext.tsx';
+import { CartProvider } from './context/CartContext.tsx';
+import { Layout } from './components/Layout.tsx';
 
 // Pages
-import { Login } from './pages/Login';
-import { Register } from './pages/Register';
-import { Marketplace } from './pages/customer/Marketplace';
-import { Cart } from './pages/customer/Cart';
-import { Orders } from './pages/customer/Orders';
-import { Dashboard } from './pages/admin/Dashboard';
-import { Products } from './pages/admin/Products';
-import { AdminOrders } from './pages/admin/AdminOrders';
-import { UserRole } from './types';
+import { Login } from './pages/Login.tsx';
+import { Register } from './pages/Register.tsx';
+import { Marketplace } from './pages/customer/Marketplace.tsx';
+import { Cart } from './pages/customer/Cart.tsx';
+import { Orders } from './pages/customer/Orders.tsx';
+import { Dashboard } from './pages/admin/Dashboard.tsx';
+import { Products } from './pages/admin/Products.tsx';
+import { AdminOrders } from './pages/admin/AdminOrders.tsx';
+import { UserRole } from './types.ts';
 
 // Route Guards
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { mockApi } from '../../services/db';
-import { Order, OrderStatus } from '../../types';
-import { useAuth } from '../../context/AuthContext';
+import { mockApi } from '../../services/db.ts';
+import { Order, OrderStatus } from '../../types.ts';
+import { useAuth } from '../../context/AuthContext.tsx';
 import { Package, Clock, CheckCircle, Truck, XCircle } from 'lucide-react';
 
 export const Orders: React.FC = () => {

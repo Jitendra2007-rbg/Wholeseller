@@ -1,4 +1,4 @@
-import { User, Product, Order, UserRole, OrderStatus } from '../types';
+import { User, Product, Order, UserRole, OrderStatus } from '../types.ts';
 
 // Initial Seed Data
 const SEED_PRODUCTS: Product[] = [

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { mockApi } from '../../services/db';
-import { Order, OrderStatus } from '../../types';
-import { Button } from '../../components/Button';
+import { mockApi } from '../../services/db.ts';
+import { Order, OrderStatus } from '../../types.ts';
+import { Button } from '../../components/Button.tsx';
 
 export const AdminOrders: React.FC = () => {
   const [orders, setOrders] = useState<Order[]>([]);

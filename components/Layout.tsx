@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAuth } from '../context/AuthContext';
-import { useCart } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext.tsx';
+import { useCart } from '../context/CartContext.tsx';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { ShoppingCart, LogOut, LayoutDashboard, Package, ShoppingBag, Users, Menu, X, FileText, RefreshCw } from 'lucide-react';
-import { mockApi } from '../services/db';
-import { UserRole } from '../types';
+import { mockApi } from '../services/db.ts';
+import { UserRole } from '../types.ts';
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user, logout, login, isAdmin } = useAuth();

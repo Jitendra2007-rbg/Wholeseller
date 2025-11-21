@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { useCart } from '../../context/CartContext';
-import { useAuth } from '../../context/AuthContext';
-import { mockApi } from '../../services/db';
-import { Button } from '../../components/Button';
+import { useCart } from '../../context/CartContext.tsx';
+import { useAuth } from '../../context/AuthContext.tsx';
+import { mockApi } from '../../services/db.ts';
+import { Button } from '../../components/Button.tsx';
 import { Trash2, ArrowRight, ChefHat, Sparkles, Plus, Minus } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { suggestRecipesFromCart } from '../../services/geminiService';
+import { suggestRecipesFromCart } from '../../services/geminiService.ts';
 
 export const Cart: React.FC = () => {
   const { items, removeFromCart, updateQuantity, clearCart, cartTotal } = useCart();

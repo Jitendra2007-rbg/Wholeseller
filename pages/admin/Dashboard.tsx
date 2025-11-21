@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { mockApi } from '../../services/db';
-import { Order, Product } from '../../types';
-import { StatsCard } from '../../components/StatsCard';
+import { mockApi } from '../../services/db.ts';
+import { Order, Product } from '../../types.ts';
+import { StatsCard } from '../../components/StatsCard.tsx';
 import { DollarSign, ShoppingCart, Package, AlertTriangle } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 

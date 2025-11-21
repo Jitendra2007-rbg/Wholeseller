@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
-import { mockApi } from '../services/db';
+import { useAuth } from '../context/AuthContext.tsx';
+import { mockApi } from '../services/db.ts';
 import { useNavigate, Link } from 'react-router-dom';
-import { Button } from '../components/Button';
+import { Button } from '../components/Button.tsx';
 import { ShoppingBag } from 'lucide-react';
 
 export const Login: React.FC = () => {

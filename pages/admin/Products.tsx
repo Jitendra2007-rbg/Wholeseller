@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { mockApi } from '../../services/db';
-import { Product } from '../../types';
-import { Button } from '../../components/Button';
+import { mockApi } from '../../services/db.ts';
+import { Product } from '../../types.ts';
+import { Button } from '../../components/Button.tsx';
 import { Plus, Edit2, Trash2, Sparkles } from 'lucide-react';
-import { generateProductDescription } from '../../services/geminiService';
+import { generateProductDescription } from '../../services/geminiService.ts';
 
 export const Products: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
