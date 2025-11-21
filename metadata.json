@@ -1,0 +1,5 @@
+{
+  "name": "WholesalePro",
+  "description": "A full-stack style wholesale grocery ordering platform with Admin and Customer roles, inventory management, and AI-powered assistance.",
+  "requestFramePermissions": []
+}
