@@ -1,3 +1,4 @@
+
 import { User, Product, Order, UserRole, OrderStatus } from '../types.ts';
 
 // Initial Seed Data
@@ -80,7 +81,17 @@ export const mockApi = {
 
   getProducts: async (): Promise<Product[]> => {
     await delay(300);
-    return getFromStorage<Product[]>('products', []);
+    const products = getFromStorage<Product[]>('products', []);
+    const orders = getFromStorage<Order[]>('orders', []);
+
+    // Calculate sales data for admin view
+    return products.map(p => {
+      const sales = orders.reduce((acc, order) => {
+        const item = order.items.find(i => i.productId === p._id);
+        return acc + (item ? item.quantity : 0);
+      }, 0);
+      return { ...p, sales, revenue: sales * p.price };
+    });
   },
 
   saveProduct: async (product: Product): Promise<Product> => {
@@ -174,5 +185,11 @@ export const mockApi = {
     await delay(200);
     if (role === UserRole.ADMIN) return SEED_ADMIN;
     return SEED_CUSTOMER;
+  },
+
+  // Analytics Helpers
+  getTopProducts: async (limit = 5): Promise<Product[]> => {
+    const products = await mockApi.getProducts();
+    return products.sort((a, b) => (b.sales || 0) - (a.sales || 0)).slice(0, limit);
   }
 };

@@ -1,3 +1,4 @@
+
 export enum UserRole {
   ADMIN = 'admin',
   CUSTOMER = 'customer',
@@ -33,6 +34,9 @@ export interface Product {
   unit: string; // e.g., 'kg', 'box', 'liters'
   stock: number;
   imageUrl: string;
+  // Analytics fields (optional/calculated)
+  sales?: number;
+  revenue?: number;
 }
 
 export interface CartItem extends Product {
